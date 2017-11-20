@@ -72,13 +72,13 @@ namespace CustomizeMigrationTable
         private CreateTableOperation AddCustomHistoryTableColumns(CreateTableOperation createTableOperation)
         {
             createTableOperation.Columns.Add(
-                new ColumnModel(PrimitiveTypeKind.DateTime)
+                new ColumnModel(PrimitiveTypeKind.String)
                 {
                     Name = "MigratingUser",
                     DefaultValueSql = "CURRENT_USER"
                 });
             createTableOperation.Columns.Add(
-                new ColumnModel(PrimitiveTypeKind.String)
+                new ColumnModel(PrimitiveTypeKind.DateTime)
                 {
                     Name = "MigrationDate",
                     DefaultValueSql = "GETDATE()"
